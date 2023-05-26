@@ -6,7 +6,14 @@ import {
   ChevronDownIcon,
   MagnifyingGlassIcon,
 } from "@heroicons/react/24/solid";
-import { StarIcon } from "@heroicons/react/24/outline";
+import {
+  BellIcon,
+  SparklesIcon,
+  ChatBubbleLeftEllipsisIcon,
+  PlusIcon,
+  CurrencyDollarIcon,
+  Bars3Icon,
+} from "@heroicons/react/24/outline";
 
 const Header = () => {
   return (
@@ -18,6 +25,29 @@ const Header = () => {
         <ChevronDownIcon className="h-5 w-5" />
       </div>
       <Search />
+      {/* Implement ham burger for this */}
+      <div className="text-gray-500 space-x-2 mx-5 hidden lg:inline-flex">
+        <SparklesIcon className="icon" />
+        <CurrencyDollarIcon className="icon" />
+        <hr className="h-10 border border-gray-100" />
+        <ChatBubbleLeftEllipsisIcon className="icon" />
+        <BellIcon className="icon" />
+        <PlusIcon className="icon" />
+      </div>
+      <div className="ml-5 flex items-center lg:hidden">
+        <Bars3Icon className="icon" />
+      </div>
+      <div className="hidden lg:flex cursor-pointer border border-gray-100">
+        <div className="relative h-7 w-6 lg:w-9 flex items-center">
+          <Image
+            src="/reddit-bot.svg"
+            fill
+            className="object-contain"
+            alt="reddit bot icon"
+          />
+          <p className="relative text-gray-400">Sign In</p>
+        </div>
+      </div>
     </div>
   );
 };
